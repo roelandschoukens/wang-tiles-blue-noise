@@ -1,0 +1,25 @@
+[project]
+name = "WangTilesBlueNoise"
+version = "1.0"
+description = "An implementation of blue noise sampling using Wang tiles, based on Recursive Wang Tiles for Real-Time Blue Noise by Kopf et. al."
+authors = [
+    {name = "Roeland Schoukens", email = "roelandschoukens@hotmail.com"},
+]
+license = "MIT"
+readme = "README.rst"
+requires-python = ">=3.7"
+dependencies = [
+    "numpy",
+]
+
+[project.optional-dependencies]
+demo = [
+    "PySide6>=6.10"
+]
+
+[tool.setuptools.package-data]
+"wangtilesbluenoise.data" = ["*.dat"]
+
+[build-system]
+requires = ["setuptools>=60", "wheel"]
+build-backend = "setuptools.build_meta"
